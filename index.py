@@ -1,5 +1,4 @@
-price_list = [10 , 2 , 12 , 24]
-another_list_to_test = [5 , 7 , 2 , 9 , 1 , 3]
+daily_prices = []
 
 def max_profit(prices):
     max_profit = 0
@@ -19,16 +18,15 @@ def max_profit(prices):
 
     return max_profit
 
-#for i in range (8):
-#    num = int(input(""))
-#    if num > 0 :
-#        price_list.append(num)
-#    elif num == -1 :
-#        break
-#    else:
-#        print("The number should be positive")
+for i in range (1 , 10):
+    num = int(input(f"Enter a price for Day {i}: (Enter -1 to stop)"))
+    if num > 0 :
+        daily_prices.append(num)
+    elif num == -1 :
+        break
+    else:
+        print("The number should be positive")
         
-print("The stock pricing list:", price_list)
-print("The maximum possible profit:", max_profit(price_list))
-print("The stock pricing list:", another_list_to_test)
-print("The maximum possible profit:", max_profit(another_list_to_test))
+print("The daily prices list:", daily_prices)
+print("The maximum possible profit:", max_profit(daily_prices))
+
